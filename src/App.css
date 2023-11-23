@@ -1,0 +1,35 @@
+.counter {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+body{
+  justify-content: center;
+}
+
+
+.root{
+  border: solid black 1px;
+  border-radius: 1rem 1rem;
+  padding: 3rem;
+  position: relative;
+}
+
+.colorDot{
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: green;
+}
