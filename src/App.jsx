@@ -9,9 +9,11 @@ function App() {
   useEffect(() => {
     let interval;
 
-    console.log("useEffect starting");
     if (running) {
+      console.log("start command");
       interval = setInterval(() => setCounter((x) => x + 1), 3000);
+    } else {
+      console.log("stop command");
     }
 
     return () => {
@@ -22,7 +24,7 @@ function App() {
   return (
     <div className="root">
       <div className="counter">{counter}</div>
-      <div className="colorDot"></div>
+      <div className={`colorDot ${running ? 'colorActive' : 'colorOff'}`}></div>
       <div className="buttons-container">
         <button onClick={() => setRunning(true)}>Start</button>
         <button onClick={() => setRunning(false)}>Stop</button>
